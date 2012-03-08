@@ -1,0 +1,15 @@
+@charset "utf-8";
+
+/************ The Basic Style Case For WebSite Start ************/
+
+#main .howto {
+	display:table-cell;
+	width:950px;
+	height:400px;
+	background:url(../images/howto_bg.jpg) repeat-x;
+	text-align:center;
+	overflow:hidden;
+	position:relative;
+	vertical-align:middle;
+}
+

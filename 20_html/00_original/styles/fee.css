@@ -1,0 +1,58 @@
+@charset "utf-8";
+
+/************ The Basic Style Case For WebSite Start ************/
+
+#main .feetitle {
+	display:block;
+	width:950px;
+	height:47px;
+	margin:5px 0px 15px 0px;
+}
+
+#main .fee {
+	width:950px;
+	padding-top:30px;
+	background:url(../images/howto_bg.jpg) repeat-x;
+	overflow:hidden;
+}
+
+#main .fee .above {
+	margin:0 auto;
+	display:block;
+	background:#446088;
+	width:95%;
+	height:25px;
+	padding:5px 0px 0px 10px;
+	color:#FFFFFF;
+	font-size:14px;
+	font-weight:bold;
+	text-align:left;
+}
+
+#main .fee .below {
+	margin:0 auto;
+	display:block;
+	background:#F5F2DC;
+	width:95%;
+	height:63px;
+	padding:5px 0px 0px 10px;
+	margin-top:4px;
+	margin-bottom:26px;
+	color:#000000;
+	font-size:14px;
+	text-align:left;
+}
+
+#main .fee table {
+	border-top:#CCCCCC solid 1px;
+	border-left:#CCCCCC solid 1px;
+}
+
+#main .fee table td {
+	border-right:#CCCCCC solid 1px;
+	border-bottom:#CCCCCC solid 1px;
+}
+
+
+
+

@@ -1,0 +1,350 @@
+@charset "utf-8";
+
+/************ The Basic Style Case For WebSite Start ************/
+
+h1 {
+    display:inline;
+	margin:0;
+	padding:0;
+	font-size:14px;
+	font-weight:normal;
+	color:#F39800;
+}
+
+h2 {
+    display:inline;
+	margin:0;
+	padding:0;
+	font-size:18px;
+	font-weight:normal;
+}
+
+h3,h4 {
+    display:inline;
+	margin:0;
+	padding:0;
+	font-size:12px;
+	font-weight:normal;
+}
+
+
+body {
+	margin:0 auto;
+	padding:0;
+	font-size:12px;
+	font-family:"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "Hiragino Kaku Gothic Pro", "Meiryo", sans-serif;
+	background:#E6E6E6;
+}
+
+br.clear {
+	clear:both;
+	font:0pt/0pt sans-serif;
+}
+
+.clear {
+    height:0;
+    clear:both;
+}
+
+img {
+	border:0px;
+	vertical-align:bottom; 
+}
+
+#container {
+	width:950px;
+	margin:0 auto;
+	padding:0px 20px 0px 20px;
+	overflow:hidden;
+	text-align:left;
+	background:#FFFFFF;
+}
+
+#header {
+	width:950px;
+	margin:0 auto;
+	overflow:hidden;
+}
+
+#header .log {
+	width:950px;
+	height:58px;
+}
+
+#header .log .logo {
+	width:266px;
+	height:58px;
+	display:block;
+	float:left;
+}
+
+#header .log .login {
+	width:582px;
+	height:36px;
+	float:right;
+	background:url(../images/log_bg.jpg) no-repeat right bottom;
+	margin-top:6px;
+	padding-top:10px;
+	text-align:center;
+}
+
+#header .log .login input {
+	margin-right:5px;
+}
+
+#header .log .login .btn {
+	width:48px;
+	height:19px;
+	margin-right:15px;
+	float:right;
+}
+
+#header .log .login .edit {
+	margin:0px 20px 0px 50px;
+}
+
+#header .log .logged {
+	width:480px;
+	height:36px;
+	float:right;
+	background:url(../images/logged_bg.jpg) no-repeat right bottom;
+	margin-top:6px;
+	padding-top:10px;
+}
+
+#header .log .logged dd {
+	margin:3px 5px 0px 15px;
+	padding:0;
+	float:left;
+}
+
+#header .log .logged .lastname {
+	margin-right:2px;
+}
+
+#header .log .logged .firstname {
+	margin:3px 1px 0px 6px;
+}
+
+#header .log .logged .gender {
+	margin:3px 12px 0px 2px;
+}
+
+#header .tutro_log {
+	display:block;
+	width:950px;
+	height:58px;
+	margin:10px 0px 20px 0px;
+}
+
+#header .tutro_log .logo {
+	width:266px;
+	height:58px;
+	display:block;
+	float:left;
+}
+
+#header .tutro_log .ad {
+	display:block;
+	width:482px;
+	height:67px;
+	float:right;
+}
+
+#header ul {
+	margin:0;
+	padding:0;
+	float:left;
+	list-style:none;
+	width:950px;
+	height:43px;
+}
+
+#header ul li {
+	margin:0;
+	padding:0;
+	list-style:none;
+	float:left;
+}
+
+#header .voice {
+	float:left;
+	margin:8px 0;
+	width:100%;
+}
+
+#header .banner {
+	display:block;
+	width:950px;
+	height:288px;
+	float:left;
+	margin-bottom:12px;
+	background:url(../images/banner/index_banner.jpg) no-repeat;
+}
+
+#main {
+	width:950px;
+	margin:0 auto;
+	overflow:hidden;
+	font-size:14px;
+}
+
+#main .introtitle {
+	display:block;
+	width:950px;
+	height:47px;
+	margin-bottom:16px;
+}
+
+#main .ttitle {
+	display:table-cell;
+	width:950px;
+	height:47px;
+	background:url(../images/titles/index_teacher.jpg) no-repeat left top;
+	text-align:right;
+	overflow:hidden;
+	position:relative;
+	vertical-align:middle;
+	margin:12px 0px 0px 0px;
+}
+
+#main .ttitle a:visited{
+	width:77px;
+	height:15px;
+	background:url(../images/btn_index_teacher1.gif) no-repeat left top;
+	margin-right:20px;
+}
+
+#main .ttitle a:link{
+	width:77px;
+	height:15px;
+	background:url(../images/btn_index_teacher1.gif) no-repeat left top;
+	margin-right:20px;
+}
+
+#main .ttitle a:hover{
+	width:77px;
+	height:15px;
+	background:url(../images/btn_index_teacher2.gif) no-repeat left top;
+	margin-right:20px;
+}
+
+.crumbs {
+	display:block;
+	float:left;
+	width:100%;
+	height:14px;
+	margin:12px 0px 12px 4px;
+	font-size:14px;
+	color:#FF9900;
+}
+
+.crumbs a:visited{
+	color:#FF9900;
+	text-decoration:none;
+}
+
+.crumbs a:link{
+	color:#FF9900;
+	text-decoration:none;
+}
+
+.crumbs a:hover{
+	color:#FF9900;
+	text-decoration:underline;
+}
+
+#footer {
+	width:950px;
+	height:60px;
+	margin-top:16px;
+	background:url(../images/foot_bg.jpg) repeat-x;
+}
+
+#footer ul {
+	list-style:none;
+	margin:14px 0px 0px 19px;
+	padding:0;
+	float:left;
+}
+
+#footer ul li {
+	list-style:none;
+	float:left;
+	color:#000000;
+	font-size:14px;
+	margin-right:10px;
+	width:auto;
+}
+
+#footer a:visited{
+	color:#000000;
+	text-decoration:none;
+}
+
+#footer a:link{
+	color:#000000;
+	text-decoration:none;
+}
+
+#footer a:hover{
+	color:#000000;
+	text-decoration:underline;
+}
+
+#footer .cr {
+	display:block;
+	text-align:center;
+	width:100%;
+	font-size:12px;
+	color:#999999;
+}
+
+.page {
+	width:950px;
+	text-align:center;
+}
+
+.page .first {
+	background:url(../images/first_page.gif) no-repeat left center;
+	padding-left:16px;
+}
+
+.page .prev {
+	background:url(../images/prev_page.gif) no-repeat left center;
+	padding-left:10px;
+}
+
+.page .next {
+	background:url(../images/next_page.gif) no-repeat right center;
+	padding-right:10px;
+}
+
+.page .last {
+	background:url(../images/last_page.gif) no-repeat right center;
+	padding-right:16px;
+}
+
+.page .pages {
+
+}
+
+.page span {
+	display:inline;
+	margin-right:10px;
+}
+
+.page a:visited{
+	color:#000000;
+	text-decoration:none;
+}
+
+.page a:link{
+	color:#000000;
+	text-decoration:none;
+}
+
+.page a:hover{
+	color:#000000;
+	text-decoration:underline;
+}
