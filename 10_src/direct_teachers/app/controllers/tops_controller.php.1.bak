@@ -1,0 +1,125 @@
+<?php
+class TopsController extends AppController {
+	var $uses = array('MgsUser', 'MgsGirlMaster', 'MgsGirlsData');
+	var $helpers = array('Html', 'Form');
+
+	function top() {
+		$user_id = $this->Auth->user('id');
+		$my_own_girls = array();
+		$mgs_user_data = $this->MgsUser->find('first', array('conditions' => array('MgsUser.user_id' => $user_id)));
+		$girl_masters = $this->MgsGirlMaster->find('all', array('conditions' => array('MgsGirlMaster.stage_id' => $mgs_user_data['MgsUser']['stage_id'])));
+		$my_girls_data = $this->MgsGirlsData->find('all', array(
+				'conditions' => array(
+					'MgsGirlsData.owner_user_id' => $user_id,
+					'MgsGirlsData.closed_flg' => 0, 
+				),
+				'order' => array(
+					'MgsGirlsData.point desc',
+				),));
+		$my_girls_detail_data = array();
+		foreach($my_girls_data as $my_girl_data) {
+			$girl_detail_data = array();
+			foreach($girl_masters as $girl_master) {
+				if($girl_master['MgsGirlMaster']['id'] == $my_girl_data['MgsGirlsData']['girl_id']) {
+					#Store master data
+					$girl_detail_data['girl_id']           =  $girl_master['MgsGirlMaster']['id'];
+					$girl_detail_data['stage_id']          =  $girl_master['MgsGirlMaster']['stage_id'];
+					$girl_detail_data['princess_flg']      =  $girl_master['MgsGirlMaster']['princess_flg'];
+					$girl_detail_data['name']              =  $girl_master['MgsGirlMaster']['name'];
+					$girl_detail_data['type']              =  $girl_master['MgsGirlMaster']['type'];
+					$girl_detail_data['required_point']    =  $girl_master['MgsGirlMaster']['required_point'];
+					$girl_detail_data['favorite_item_id1'] =  $girl_master['MgsGirlMaster']['favorite_item_id1'];
+					$girl_detail_data['favorite_item_id2'] =  $girl_master['MgsGirlMaster']['favorite_item_id2'];
+					$girl_detail_data['favorite_item_id3'] =  $girl_master['MgsGirlMaster']['favorite_item_id3'];
+					$girl_detail_data['favorite_item_id4'] =  $girl_master['MgsGirlMaster']['favorite_item_id4'];
+					$girl_detail_data['favorite_item_id5'] =  $girl_master['MgsGirlMaster']['favorite_item_id5'];
+
+					#Store living data
+					$girl_detail_data['player_user_id']        =  $my_girl_data['MgsGirlsData']['player_user_id'];
+					$girl_detail_data['owner_user_id']         =  $my_girl_data['MgsGirlsData']['owner_user_id'];
+					$girl_detail_data['current_date_id']       =  $my_girl_data['MgsGirlsData']['current_date_id'];
+					$girl_detail_data['current_date_precent']  =  $my_girl_data['MgsGirlsData']['current_date_percent'];
+					$girl_detail_data['point']                 =  $my_girl_data['MgsGirlsData']['point'];
+					$girl_detail_data['point_updated']         =  $my_girl_data['MgsGirlsData']['point_updated'];
+					$girl_detail_data['fav_item_given_date']   =  $my_girl_data['MgsGirlsData']['fav_item_given_date'];
+					$girl_detail_data['fav_item_given_id']     =  $my_girl_data['MgsGirlsData']['fav_item_given_date'];
+					$girl_detail_data['guard_num']             =  $my_girl_data['MgsGirlsData']['guard_num'];
+					array_push($my_girls_detail_data, $girl_detail_data);
+				}
+				
+			}
+		}
+		usort($my_girls_detail_data, array($this, "_comp_girl_by_point"));
+		$my_girls_displayed = array();
+		for($i=1; $i<= Configure::read('girls_type_num'); $i++) {
+			foreach($my_girls_detail_data as $my_girl_detail_data) {
+				if($my_girl_detail_data['type'] == $i) {
+					$my_girls_displayed[$i] = $my_girl_detail_data;	
+				}
+			}	
+		}
+		debug($my_girls_displayed);
+		$this->set('my_girls_displayed',$my_girls_displayed);
+	}
+
+	function _comp_girl_by_point($a, $b) {
+		if($a['point'] > $a['point']) {
+			return 1;
+		}elseif($a['point'] < $a['point']) {
+			return -1;
+		} else {
+			return 0;
+		}
+		return 0;
+	}
+
+	function register() {
+		$user_id = $this->Auth->user('id');
+		$game_user_count = $this->MgsUser->find('count', array('conditions' => array('MgsUser.user_id' => $user_id)));
+		if($game_user_count > 0) {
+			$this->cakeError('invalidAccess');
+		}elseif (!empty($this->data)) {
+			#Initial game data
+			$now = time();
+			$game_data = array();
+			$game_data["name"] = $this->data["MgsUser"]["name"];
+			$game_data["user_id"] = $this->Auth->user('id');
+			$game_data["last_login_date"] = $now;
+			$game_data["exp"] = 0;
+			$game_data["energy_max"] = 10;
+			$game_data["energy_remain"] = 10;
+			$game_data["skill_remain"] = 0;
+			$game_data["skill_cloth"] = 10;
+			$game_data["skill_social"] = 10;
+			$game_data["skill_health"] = 10;
+			$game_data["power_cloth"] = 10;
+			$game_data["power_social"] = 10;
+			$game_data["power_health"] = 10;
+			$game_data["stage_id"] = 1;
+			$this->MgsUser->begin();
+			$game_user_result = $this->MgsUser->save($game_data);
+			$game_user_new = $this->MgsUser->find('first', array('conditions' => array('MgsUser.user_id' => $user_id)));
+	
+			#Initial girl data
+			$girl_masters = $this->MgsGirlMaster->find('all', array('conditions' => array('MgsGirlMaster.stage_id' => 1,'MgsGirlMaster.princess_flg' => 0)));
+			$rand_key = array_rand($girl_masters);
+			$girl_given = $girl_masters[$rand_key];
+			$init_girl_data = array();
+			$init_girl_data["girl_id"] = $girl_given['MgsGirlMaster']['id'];
+			$init_girl_data["player_user_id"] = $game_user_new['MgsUser']['id'];
+			$init_girl_data["owner_user_id"] = $game_user_new['MgsUser']['id'];
+			$init_girl_result = $this->MgsGirlsData->save($init_girl_data);
+			if($game_user_result && $init_girl_result) {
+				$this->MgsUser->commit();
+				$this->redirect('/tops/top/');
+			} else {
+				$this->MgsUser->rollback();
+				$this->cakeError('invalidAccess');
+			}
+		} else {
+			#user hasn't registerd to he game, registration page is shown
+		}
+
+	}
+
+}
