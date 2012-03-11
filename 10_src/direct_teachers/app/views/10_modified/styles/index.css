@@ -1,0 +1,105 @@
+@charset "utf-8";
+
+/************ The Basic Style Case For WebSite Start ************/
+
+#main .index_table {
+	background:#F5BAD4;
+	margin:12px 0px 12px 0px;
+}
+
+#main .index_table tr {
+	background:#FFFFFF;
+}
+
+#main .index_table .tb_title {
+	background:#EE87B4;
+	color:#FFFFFF;
+	font-weight:bold;
+}
+
+#main .index_search {
+	width:615px;
+	float:left;
+	margin:0;
+	padding:0;
+	background:#EAEAE8;
+}
+
+#main .index_search .stitle {
+	display:table-cell;
+	width:615px;
+	height:43px;
+	background:url(../images/titles/index_search.jpg) no-repeat left top;
+	text-align:right;
+	overflow:hidden;
+	position:relative;
+	vertical-align:middle;
+	margin:12px 0px 0px 0px;
+}
+
+#main .index_search .stitle a:visited{
+	width:77px;
+	height:15px;
+	background:url(../images/btn_index_search_arrow1.gif) no-repeat left top;
+	margin-right:20px;
+}
+
+#main .index_search .stitle a:link{
+	width:77px;
+	height:15px;
+	background:url(../images/btn_index_search_arrow1.gif) no-repeat left top;
+	margin-right:20px;
+}
+
+#main .index_search .stitle a:hover{
+	width:77px;
+	height:15px;
+	background:url(../images/btn_index_search_arrow2.gif) no-repeat left top;
+	margin-right:20px;
+}
+
+#main .index_search .sform {
+	width:613px;
+	float:left;
+	border:#CCCCCC solid 1px;
+	border-top:none;
+	background:url(../images/index_search_bg.jpg) repeat-x;
+}
+
+#main .index_search .sform dl {
+	margin:0;
+	padding:0;
+	width:580px;
+}
+
+#main .index_search .sform dl dd {
+	margin:0px 0px 0px 35px;
+	padding: 12px 0px 14px 4px;
+	border-bottom:#666666 solid 1px;
+}
+
+#main .index_search .sform dl dd strong {
+	display:block;
+	margin-bottom:5px;
+}
+
+#main .index_search .sform dl .lastdd {
+	margin:0px 0px 0px 35px;
+	padding: 12px 0px 14px 4px;
+	border-bottom:none;
+}
+
+#main .index_search .sform p {
+	text-align:center;
+	width:100%;
+}
+
+#main .index_side {
+	width:305px;
+	float:right;
+}
+
+#main .index_side img {
+	margin-bottom:12px;
+}
+

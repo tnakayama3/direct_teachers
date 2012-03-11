@@ -50,7 +50,7 @@ ini_set('display_errors', 1);
  *
  */
 	if (!defined('CAKE_CORE_INCLUDE_PATH')) {
-		define('CAKE_CORE_INCLUDE_PATH',  DS . 'Applications' . DS . 'XAMPP' . DS . 'xamppfiles' . DS . 'htdocs' . DS . 'manygirls');
+		define('CAKE_CORE_INCLUDE_PATH', ROOT);
 	}
 
 /**

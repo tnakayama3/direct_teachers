@@ -1,0 +1,63 @@
+@charset "utf-8";
+
+/************ The Basic Style Case For WebSite Start ************/
+
+.ctitle {
+	display:table-cell;
+	width:950px;
+	height:47px;
+	background:url(../images/titles/consider_title.jpg) no-repeat left top;
+	text-align:right;
+	overflow:hidden;
+	position:relative;
+	vertical-align:middle;
+}
+
+.ctitle img {
+	position:static;
+	+position:relative;
+	top:-50%;left:-50%;
+	margin-right:16px;
+}
+  
+.btn_search {
+	display:block;
+	margin:14px 0px 14px 0px;
+}
+
+#main .consider {
+	width:950px;
+}
+
+#main .list table {
+	background:#F5BAD4;
+	margin:12px 0px 12px 0px;
+	margin-top:14px;
+	border-left:#F5BAD4 solid 1px;
+}
+
+#main .list table tr {
+	background:#FFFFFF;
+}
+
+#main .list table .tb_title {
+	background:#EE87B4;
+	color:#FFFFFF;
+	font-weight:bold;
+}
+
+#main .list table td {
+	border-right:#F5BAD4 solid 1px;
+	border-bottom:#F5BAD4 solid 1px;
+}
+
+#main .page {
+	width:950px;
+	text-align:center;
+}
+
+#main .page span {
+	display:inline;
+	margin-right:10px;
+}
+

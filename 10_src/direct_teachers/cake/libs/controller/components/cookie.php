@@ -44,7 +44,7 @@ class CookieComponent extends Object {
  * @var string
  * @access public
  */
-	var $name = 'manygirls';
+	var $name = 'CakeCookie';
 
 /**
  * The time a cookie will remain valid.
@@ -468,6 +468,10 @@ class CookieComponent extends Object {
  * @access private
  */
 	function __explode($string) {
+		if (($string[0] === '{' || $string[0] === '[') && function_exists('json_decode')) {
+			$ret = json_decode($string, true);
+			return ($ret != null) ? $ret : $string;
+		}
 		$array = array();
 		foreach (explode(',', $string) as $pair) {
 			$key = explode('|', $pair);

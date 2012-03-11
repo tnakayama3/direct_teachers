@@ -1,0 +1,60 @@
+<div class="teachers form">
+<?php echo $this->Form->create('Teacher');?>
+	<fieldset>
+		<legend><?php __('Add Teacher'); ?></legend>
+	<?php
+		echo $this->Form->input('fb_id');
+		echo $this->Form->input('last_name');
+		echo $this->Form->input('first_name');
+		echo $this->Form->input('email');
+		echo $this->Form->input('birth_year');
+		echo $this->Form->input('birth_month');
+		echo $this->Form->input('birth_day');
+		echo $this->Form->input('gender');
+		echo $this->Form->input('university');
+		echo $this->Form->input('department');
+		echo $this->Form->input('study_status');
+		echo $this->Form->input('fee');
+		echo $this->Form->input('prefecture');
+		echo $this->Form->input('ele_math');
+		echo $this->Form->input('ele_lang');
+		echo $this->Form->input('ele_science');
+		echo $this->Form->input('ele_society');
+		echo $this->Form->input('ele_english');
+		echo $this->Form->input('junior_math');
+		echo $this->Form->input('junior_lang');
+		echo $this->Form->input('junior_science');
+		echo $this->Form->input('junior_society');
+		echo $this->Form->input('junior_english');
+		echo $this->Form->input('high_math');
+		echo $this->Form->input('high_lang');
+		echo $this->Form->input('high_english');
+		echo $this->Form->input('high_physics');
+		echo $this->Form->input('high_chemistry');
+		echo $this->Form->input('high_geography');
+		echo $this->Form->input('high_jp_history');
+		echo $this->Form->input('high_world_history');
+		echo $this->Form->input('juken_junior');
+		echo $this->Form->input('juken_high');
+		echo $this->Form->input('juken_univ');
+		echo $this->Form->input('spot');
+		echo $this->Form->input('start_date');
+		echo $this->Form->input('end_date');
+		echo $this->Form->input('comment');
+		echo $this->Form->input('misc_flg1');
+		echo $this->Form->input('misc_flg2');
+		echo $this->Form->input('misc_flg3');
+		echo $this->Form->input('misc_data1');
+		echo $this->Form->input('misc_data2');
+		echo $this->Form->input('misc_data3');
+	?>
+	</fieldset>
+<?php echo $this->Form->end(__('Submit', true));?>
+</div>
+<div class="actions">
+	<h3><?php __('Actions'); ?></h3>
+	<ul>
+
+		<li><?php echo $this->Html->link(__('List Teachers', true), array('action' => 'index'));?></li>
+	</ul>
+</div>

@@ -1,0 +1,79 @@
+@charset "utf-8";
+
+/************ The Basic Style Case For WebSite Start ************/
+
+#main h2 {
+	width:100%;
+	font-weight:bold;
+	font-size:14px;
+}
+
+#main .step1 {
+	display:block;
+	width:820px;
+	height:107px;
+	padding:30px 0px 0px 130px;
+	margin:25px 0px 14px 0px;
+	background:url(../images/tutor/contract_step1.jpg) no-repeat;
+}
+
+#main .step2 {
+	display:block;
+	width:820px;
+	height:107px;
+	padding:30px 0px 0px 130px;
+	margin:0px 0px 14px 0px;
+	background:url(../images/tutor/contract_step2.jpg) no-repeat;
+}
+
+#main .step3 {
+	display:block;
+	width:820px;
+	height:107px;
+	padding:30px 0px 0px 130px;
+	margin:0px 0px 14px 0px;
+	background:url(../images/tutor/contract_step3.jpg) no-repeat;
+}
+
+#main .step4 {
+	display:block;
+	width:820px;
+	height:107px;
+	padding:30px 0px 0px 130px;
+	margin:0px 0px 14px 0px;
+	background:url(../images/tutor/contract_step4.jpg) no-repeat;
+}
+
+#main .step5 {
+	display:block;
+	width:820px;
+	height:107px;
+	padding:30px 0px 0px 130px;
+	margin:0px 0px 14px 0px;
+	background:url(../images/tutor/contract_step5.jpg) no-repeat;
+}
+
+#main .step6 {
+	display:block;
+	width:820px;
+	height:79px;
+	padding:30px 0px 0px 130px;
+	margin:0px 0px 30px 0px;
+	background:url(../images/tutor/contract_step6.jpg) no-repeat;
+}
+
+#main strong {
+	display:block;
+	font-size:20px;
+	width:130px;
+	margin-right:10px;
+	float:left;
+}
+
+#main .text {
+	display:block;
+	width:455px;
+	font-size:14px;
+	float:left;
+	margin:0 auto;
+}

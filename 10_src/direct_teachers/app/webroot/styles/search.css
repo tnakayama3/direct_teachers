@@ -1,0 +1,113 @@
+@charset "utf-8";
+
+/************ The Basic Style Case For WebSite Start ************/
+
+h1 {
+	font-size:18px;
+	font-weight:bold;
+}
+
+#main .search_list_title {
+	display:table-cell;
+	width:950px;
+	height:47px;
+	background:url(../images/titles/search_list.jpg) no-repeat;
+	text-align:right;
+	overflow:hidden;
+	position:relative;
+	vertical-align:middle;
+}
+
+#main .search_list_title img {
+	margin:-2px 12px 0px 0px;
+}
+
+#main .search {
+	width:950px;
+	float:left;
+	margin-top:12px;
+}
+
+#main .search .sform {
+	display:block;
+	width:948px;
+	border:#CCCCCC solid 1px;
+	background:url(../images/search_bg.jpg) repeat-x;
+}
+
+#main .search .sform dl {
+	margin:0;
+	padding:0;
+	width:906px;
+}
+
+#main .search .sform dl dd {
+	margin:0px 0px 0px 35px;
+	padding: 12px 0px 14px 4px;
+	border-bottom:#666666 solid 1px;
+}
+
+#main .search .sform dl dd .space {
+	display:block;
+	margin-bottom:5px;
+}
+
+#main .search .sform dl .lastdd {
+	margin:0px 0px 0px 35px;
+	padding: 12px 0px 14px 4px;
+	border-bottom:none;
+}
+
+#main .search .sform p {
+	text-align:center;
+	width:100%;
+}
+
+#main .sltitle {
+	display:block;
+	width:905px;
+	height:47px;
+	background:url(../images/title_bg.jpg) no-repeat left top;
+	padding:10px 10px 0px 35px;
+	*padding:14px 35px 0px 35px !important;
+	padding:14px 35px 0px 35px\0;
+}
+
+#main .sltitle a:visited {
+	width:136px;
+	height:32px;
+	float:right;
+	text-decoration:none;
+	background:url(../images/btn_search_list.gif) no-repeat right center;
+}
+
+#main .sltitle a:link {
+	width:136px;
+	height:32px;
+	float:right;
+	text-decoration:none;
+	background:url(../images/btn_search_list.gif) no-repeat right center;
+}
+
+#main .sltitle a:hover {
+	width:136px;
+	height:32px;
+	float:right;
+	text-decoration:none;
+	background:url(../images/btn_search_list.gif) no-repeat right center;
+}
+
+#main .search_list_table {
+	background:#F5BAD4;
+	margin-bottom:12px;
+}
+
+#main .search_list_table tr {
+	background:#FFFFFF;
+}
+
+#main .search_list_table .tb_title {
+	background:#EE87B4;
+	color:#FFFFFF;
+	font-weight:bold;
+}

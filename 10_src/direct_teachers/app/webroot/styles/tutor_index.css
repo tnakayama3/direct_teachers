@@ -1,0 +1,67 @@
+@charset "utf-8";
+
+/************ The Basic Style Case For WebSite Start ************/
+
+#main a:visited{
+	color:#000000;
+	text-decoration:none;
+}
+
+#main a:link{
+	color:#000000;
+	text-decoration:none;
+}
+
+#main a:hover{
+	color:#000000;
+	text-decoration:none;
+}
+
+
+#main .part {
+	width:296px;
+	height:213px;
+	float:left;
+	border:#AEAEAE solid 1px;
+	text-align:center;
+	padding:0px 6px;
+	margin-top:15px;
+}
+
+#main .part .top {
+	display:block;
+	width:296px;
+	height:54px;
+	text-align:left;
+	padding-top:6px;
+	color:#252525;
+	font-size:16px;
+	background:url(../images/tutor_arrow.gif) right center no-repeat;
+}
+
+#main .part .top .text {
+	display:block;
+	margin-top:3px;
+	font-size:12px;
+	color:#575757;
+}
+
+#main .part .middle {
+	margin:0 auto;
+	display:block;
+	width:290px;
+	height:50px;
+	padding:5px 0px 0px 6px;;
+	background:#E4E5DF;
+	border-top:#9B2324 solid 2px;
+	color:#727170;
+	font-size:14px;
+	text-align:left;
+}
+
+#main .part .bottom {
+	margin:0 auto;
+	display:block;
+	width:296px;
+	height:90px;
+}

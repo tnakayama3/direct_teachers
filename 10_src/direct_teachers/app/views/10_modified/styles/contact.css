@@ -1,0 +1,79 @@
+@charset "utf-8";
+
+/************ The Basic Style Case For WebSite Start ************/
+
+.prompt {
+	font-size:14px;
+	margin:12px 0px 12px 0px;
+	color:#FF9900;
+}
+
+.ctitle {
+	display:table-cell;
+	width:950px;
+	height:47px;
+	background:url(../images/titles/contact_title.jpg) no-repeat left top;
+	text-align:right;
+	overflow:hidden;
+	position:relative;
+	vertical-align:middle;
+}
+
+.ctitle img {
+	position:static;
+	+position:relative;
+	top:-50%;left:-50%;
+	margin:0px 12px 0px 0px;
+}
+  
+.btn_search {
+	display:block;
+	margin:14px 0px 14px 0px;
+}
+
+#main .contact_list {
+	width:950px;
+	text-align:center;
+	float:left;
+}
+
+#main .contact_list table {
+	background:#F5BAD4;
+	margin-bottom:12px;
+}
+
+#main .contact_list table tr {
+	background:#FFFFFF;
+}
+
+#main .contact_list table .tb_title {
+	color:#FFFFFF;
+	font-weight:bold;
+	background:#EE87B4;
+}
+
+#main .page {
+	width:950px;
+	text-align:center;
+}
+
+#main .page span {
+	display:inline;
+	margin-right:10px;
+}
+
+#main .contact_detail table {
+	border-top:#F5F5F5 solid 1px;
+	border-left:#F5F5F5 solid 1px;
+	margin-top:20px;
+}
+
+#main .contact_detail table td {
+	border-right:#F5F5F5 solid 1px;
+	border-bottom:#F5F5F5 solid 1px;
+}
+
+#main .contact_detail table  .little {
+	font-size:12px;
+	color:#F39800;
+}
